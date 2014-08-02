@@ -1,6 +1,7 @@
 Ruby Try
 ========
 [![Gem Version](https://badge.fury.io/rb/ruby-try.svg)](http://badge.fury.io/rb/ruby-try)
+[![Dependency Status](https://gemnasium.com/OrelSokolov/ruby-try.svg)](https://gemnasium.com/OrelSokolov/ruby-try)
 [![Code Climate](https://codeclimate.com/github/OrelSokolov/ruby-try/badges/gpa.svg)](https://codeclimate.com/github/OrelSokolov/ruby-try)
 
 This gem has two versions of `try()`. 
