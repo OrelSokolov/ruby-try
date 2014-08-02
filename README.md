@@ -24,6 +24,7 @@ Why boolean `try?`
 =================
 
 Imagine, we have something like this:
+
 ```ruby
 def admin_in_team?(team)
   if m = team_members.find_by_team_id(team.id)
@@ -35,6 +36,7 @@ end
 ```
 
 Of course, it is better to write something like
+
 ```
 def admin_in_team?(team)
   team_members.find_by_team_id(team.id).try(:admin?)
