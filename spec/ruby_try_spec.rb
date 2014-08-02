@@ -59,8 +59,6 @@ describe Object do
 
   describe "#try" do
     context "for existing method" do
-      include_context "#try, method exists" 
-
       it "should return value for general method" do
         subject.try(:get_zero).should eq(0)
       end
@@ -72,7 +70,6 @@ describe Object do
 
     context "for non-existing method" do
       include_context "#try, method not exists" 
-
     end
 
   end
