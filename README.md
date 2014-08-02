@@ -17,8 +17,12 @@ irb(main):001:0> require 'ruby-try'
 => true
 irb(main):002:0> nil.try(:admin?)
 => nil
-irb(main):003:0> nil.try?(:admin?)
+irb(main):003:0> nil.try(:nil?) 
+=> nil                             # does it makes sense? 
+irb(main):004:0> nil.try?(:admin?)
 => false
+irb(main):005:0> nil.try?(:nil?)   # IMHO, it make sense
+=> true
 ```
 
 Why boolean `try?`
