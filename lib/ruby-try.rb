@@ -1,5 +1,20 @@
+module RubyTry
+  def try?(*args)
+    if args.first =~ /[?]$/
+      if respond_to?(args.first)
+        public_send(*args)
+      else
+       false
+      end
+    else
+      raise ArgumentError, "For non-boolean methods use only try()"
+    end
+  end
+end
+
 class Object
-   # Invokes the public method whose name goes as first argument just like
+  include RubyTry
+  # Invokes the public method whose name goes as first argument just like
   # +public_send+ does, except that if the receiver does not respond to it the
   # call returns +nil+ rather than raising an exception.
   #
@@ -56,22 +71,11 @@ class Object
     end
   end
 
-  def try?(*a, &b)
-    if a.empty? && block_given?
-      yield self
-    else
-      if respond_to?(a.first)
-        public_send(*a, &b)
-      else
-        nil.try?(*a, &b)
-      end
-    end
-  end
-
 end
 
 class NilClass
-    # Calling +try+ on +nil+ always returns +nil+.
+  include RubyTry
+  # Calling +try+ on +nil+ always returns +nil+.
   # It becomes specially helpful when navigating through associations that may return +nil+.
   #
   #   nil.try(:name) # => nil
@@ -87,16 +91,5 @@ class NilClass
 
   def try!(*args)
     nil
-  end
-
-  # Calling +try?+ on +nil+ returns +false+
-  # With +try?+
-  #   @person.try(:children).try(:first).try?(:has_dark_hairs?)
-  def try?(*args)
-    if args.first =~ /[?]$/
-     false
-    else
-      raise ArgumentError, "For non-boolean methods use only try()"
-    end
   end
 end

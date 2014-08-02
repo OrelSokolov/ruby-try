@@ -153,8 +153,8 @@ describe NilClass do
     context "for existing method" do
       include_context "#try?, method exists" 
 
-      it "should return false for boolean method" do
-        subject.try?(:zero?).should eq(false)
+      it "should return value for boolean method" do
+        subject.try?(:zero?).should eq(true)
       end
     end
 
