@@ -1,5 +1,6 @@
 Ruby Try
 ========
+[![Gem Version](https://badge.fury.io/rb/ruby-try.svg)](http://badge.fury.io/rb/ruby-try)
 This gem has two versions of `try()`. 
 
 * **Vanilla `try()`** 
