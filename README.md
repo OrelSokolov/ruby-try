@@ -8,25 +8,34 @@ This gem has two versions of `try()`.
   * This is `try()` for boolean functions. It is returns `false` instead of `nil`, when trying to call
 something like `nil.try(:some_boolean_method?)`
 
+```ruby
+irb(main):001:0> require 'ruby-try'
+=> true
+irb(main):002:0> nil.try(:admin?)
+=> nil
+irb(main):003:0> nil.try?(:admin?)
+=> false
+```
+
 Why boolean `try?`
 =================
 
 Imagine, we have something like this:
 ```ruby
-  def admin_in_team?(team)
-    if m = team_members.find_by_team_id(team.id)
-      m.admin?
-    else
-      false
-    end
+def admin_in_team?(team)
+  if m = team_members.find_by_team_id(team.id)
+    m.admin?
+  else
+    false
   end
+end
 ```
 
 Of course, it is better to write something like
 ```
-  def admin_in_team?(team)
-    team_members.find_by_team_id(team.id).try(:admin?)
-  end
+def admin_in_team?(team)
+  team_members.find_by_team_id(team.id).try(:admin?)
+end
 ```
 
 But there is a TRAP! If `find_by_team_id(team.id)` returns `nil`,
