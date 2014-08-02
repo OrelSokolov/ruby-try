@@ -4,18 +4,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name        = 'ruby-try'
-  spec.version     = '1.0.0'
-  spec.date        = '2014-08-01'
+  spec.version     = '1.0.1'
+  spec.date        = '2014-08-02'
   spec.summary     = "Provides RoR try() and extends it by new try?() method."
-  spec.description = <<-DESC
-    This gem has two versions of `try()`. 
-
-    Vanilla `try()`
-      This is RoR vanilla `try()` and `try!()` methods. Nothing new.
-    Boolean `try?()`
-      It is returns `false` instead of `nil`, when trying to call something like 
-      `nil.try?(:some_boolean_method?)`
-  DESC
+  spec.description = "Provides RoR try() and extends it by new try?() method."
   spec.authors     = ["Oleg Orlov"]
   spec.email       = 'orelcokolov@gmail.com'
   spec.homepage    = 'http://rubygems.org/gems/ruby-try'
