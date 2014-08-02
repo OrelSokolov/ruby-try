@@ -58,6 +58,8 @@ describe Object do
   include_context 'object with try'
 
 
+  ###############################################################################
+  
   describe "#try" do
     context "for existing method" do
       include_context "#try, method exists" 
@@ -171,7 +173,7 @@ describe NilClass do
 
   describe "#try!" do
     context "for existing method" do
-      
+
       it "should return nil for boolean method" do
         subject.try!(:zero?).should eq(nil)
       end
