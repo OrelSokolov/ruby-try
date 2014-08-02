@@ -3,10 +3,6 @@ require 'ruby-try'
 
 #########################################################################3
 
-shared_context "#try, method exists" do
-
-end
-
 shared_context "#try, method not exists" do
   it "should return nil for general method" do
     subject.try(:non_existing_method).should eq(nil)
@@ -37,6 +33,7 @@ shared_context "#try?, method not exists" do
 end
 
 
+#########################################################################3
 
 shared_context "object with try" do
   before do
@@ -59,7 +56,7 @@ describe Object do
 
 
   ###############################################################################
-  
+
   describe "#try" do
     context "for existing method" do
       include_context "#try, method exists" 
