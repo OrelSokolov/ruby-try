@@ -6,9 +6,9 @@ Ruby Try
 This gem has two versions of `try()`. 
 
 * **Vanilla `try()`** 
-  * This is RoR vanilla `try()` and `try!()`. Nothing new.
+  * RoR vanilla `try()` and `try!()`. Nothing new.
 * **Boolean `try?()`** 
-  * This is `try()` for boolean functions. It is returns `false` instead of `nil`, when trying to call
+  * `try()` for boolean functions. It is returns `false` instead of `nil`, when trying to call
 something like `nil.try(:some_boolean_method?)`
 
 ```ruby
