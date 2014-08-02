@@ -21,7 +21,7 @@ irb(main):003:0> nil.try(:nil?)
 => nil                             # does it makes sense? 
 irb(main):004:0> nil.try?(:admin?)
 => false
-irb(main):005:0> nil.try?(:nil?)   # IMHO, it make sense
+irb(main):005:0> nil.try?(:nil?)   # IMHO, it makes sense
 => true
 ```
 
