@@ -58,11 +58,15 @@ vanilla behavior from `try()`, so that's why a new `try?()` method appears. It i
 elegant, but one line is better than 5 with misty logic.
 
 ## Compatibility
+Do not use gem with 1.8
+
 - 2.1.2
 - 2.0.0
 - 1.9.3
-- jruby-19mode # JRuby in 1.9 mode
+- jruby (1.9 mode)
 - rbx-2.2.9
+
+[Report bug if gem fails on your machine](https://github.com/OrelSokolov/ruby-try/issues)
 
 
 ## Installation
