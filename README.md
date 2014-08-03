@@ -43,7 +43,7 @@ end
 
 Of course, it is better to write something like
 
-```
+```ruby
 def admin_in_team?(team)
   team_members.find_by_team_id(team.id).try(:admin?)
 end
@@ -75,14 +75,14 @@ Or install it yourself as:
     $ gem install ruby-try
 
 ## Documentation
-  Please, use specs to explore behavior of this gem. Or refer to RoR documentation.
+Please, use specs to explore behavior of this gem. Or refer to RoR documentation.
 
-  ```
-    git clone https://github.com/OrelSokolov/ruby-try
-    cd ruby-try
-    bundle
-    rspec spec/
-  ```
+```bash
+git clone https://github.com/OrelSokolov/ruby-try
+cd ruby-try
+bundle
+rspec spec/
+```
 
 ## Contributing
 
