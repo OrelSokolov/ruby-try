@@ -62,6 +62,7 @@ elegant, but one line is better than 5 with misty logic.
 - 2.0.0
 - 1.9.3
 - jruby-19mode # JRuby in 1.9 mode
+- rbx-2.2.9
 
 
 ## Installation
