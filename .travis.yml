@@ -1,6 +1,6 @@
 language: ruby
 before_install:
-  - bundle clean --force 
+  - bundle clean 
   - bundle update
 install: bundle
 rvm:
