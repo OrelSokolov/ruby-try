@@ -57,6 +57,12 @@ First idea is to patch `try()`. But it is not best idea. Many developers expects
 vanilla behavior from `try()`, so that's why a new `try?()` method appears. It is looks not
 elegant, but one line is better than 5 with misty logic.
 
+## Compatibility
+- 2.1.2
+- 2.0.0
+- 1.9.3
+- jruby-19mode # JRuby in 1.9 mode
+
 
 ## Installation
 
