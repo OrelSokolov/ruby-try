@@ -1,11 +1,13 @@
 # coding: utf-8
+require 'date'
+
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name        = 'ruby-try'
   spec.version     = '1.1.1'
-  spec.date        = '2014-08-02'
+  spec.date        =  Date.today.strftime("%F")
   spec.summary     = "Provides RoR try() and extends it by new try?() method."
   spec.description = "Provides RoR try() and extends it by new try?() method."
   spec.authors     = ["Oleg Orlov"]
