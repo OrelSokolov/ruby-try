@@ -19,3 +19,4 @@ task :check => :ensure_all_commited
 task :check => :ensure_all_specs_pass
 
 task :build => :check
+task :default => :ensure_all_specs_pass
