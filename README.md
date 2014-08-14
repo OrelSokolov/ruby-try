@@ -4,12 +4,13 @@ Ruby Try
 [![Dependency Status](https://gemnasium.com/OrelSokolov/ruby-try.svg)](https://gemnasium.com/OrelSokolov/ruby-try)
 [![Build Status](https://travis-ci.org/OrelSokolov/ruby-try.svg)](https://travis-ci.org/OrelSokolov/ruby-try)
 [![Code Climate](https://codeclimate.com/github/OrelSokolov/ruby-try/badges/gpa.svg)](https://codeclimate.com/github/OrelSokolov/ruby-try)
+[![Coverage Status](https://img.shields.io/coveralls/OrelSokolov/ruby-try.svg)](https://coveralls.io/r/OrelSokolov/ruby-try?branch=master)
 
-This gem has two versions of `try()`. 
+This gem has two versions of `try()`.
 
-* **Vanilla `try()`** 
+* **Vanilla `try()`**
   * RoR vanilla `try()` and `try!()`. Nothing new.
-* **Boolean `try?()`** 
+* **Boolean `try?()`**
   * `try()` for boolean functions. It is returns `false` instead of `nil`, when trying to call
 something like `nil.try(:some_boolean_method?)`
 
@@ -18,8 +19,8 @@ irb(main):001:0> require 'ruby-try'
 => true
 irb(main):002:0> nil.try(:admin?)
 => nil
-irb(main):003:0> nil.try(:nil?) 
-=> nil                             # does it make sense? 
+irb(main):003:0> nil.try(:nil?)
+=> nil                             # does it make sense?
 irb(main):004:0> nil.try?(:admin?)
 => false
 irb(main):005:0> nil.try?(:nil?)   # IMHO, it makes sense
@@ -51,7 +52,7 @@ end
 
 But there is a TRAP! If `find_by_team_id(team.id)` returns `nil`,
 `nil.try(:anything)` returns `nil`. Is it a reason for writing this HUGE `if`?
-I don't think so. 
+I don't think so.
 
 First idea is to patch `try()`. But it is not best idea. Many developers expects
 vanilla behavior from `try()`, so that's why a new `try?()` method appears. It is looks not
