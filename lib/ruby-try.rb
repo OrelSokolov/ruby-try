@@ -1,11 +1,7 @@
 module RubyTry
   def try?(*args)
     if args.first =~ /[?]$/
-      if respond_to?(args.first)
-        public_send(*args)
-      else
-       false
-      end
+      respond_to?(args.first) ? public_send(*args) : false
     else
       raise ArgumentError, "For non-boolean methods use only try()"
     end

@@ -1,3 +1,15 @@
+require 'simplecov'
+require 'coveralls'
+
+SimpleCov.start do
+  add_filter "/spec/"
+end
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+
 RSpec.configure do |config|
   config.mock_with :rspec do |c|
     c.syntax = [:should, :expect] # Disable warnings
